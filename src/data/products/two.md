@@ -9,3 +9,5 @@ Product #2
 This post intentionally left blank.
 
 Write what you want.
+
+This page is an adapted version of [pandas cheatsheet](/assets/product/0.pdf). It should give you an idea of how different elements are styled on this template.
