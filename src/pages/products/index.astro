@@ -1,19 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = 'Blog';
-const description = 'Latest articles.';
-const permalink = `${Astro.site.href}blog`;
+const title = 'Products';
+const description = 'Latest Products';
+const permalink = `${Astro.site.href}products`;
 
-let allPosts = await Astro.glob('../../data/blog-posts/*.md');
+let allPosts = await Astro.glob('../../data/products/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink} current="blog">
+<BaseLayout title={title} description={description} permalink={permalink} current="products">
   <div class="container">  
-    <h1>Blog</h1>
+    <h1>Products</h1>
     {allPosts.map((post, index) => {
-      const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+      const href = `/products/${post.file.split('/').pop().split('.').shift()}`;
       return (
         <div>          
           { index !== 0 && <hr /> }
